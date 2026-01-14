@@ -1,8 +1,8 @@
 import { StatusBar } from 'expo-status-bar';
 import { useState } from 'react';
 import { ImageBackground, Pressable, SafeAreaViewBase, StyleSheet, Text, View } from 'react-native';
-import CategoriesList from './components/categoriesList';
-import data from './mockDatabase.json'
+import CategoriesList from './components/Categories';
+import data from './mockDatabase.json';
 
 export default function App() {
     const [categories, setCategories] = useState(false);
