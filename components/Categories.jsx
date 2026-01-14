@@ -1,15 +1,19 @@
-import { Text, View } from "react-native";
+import { FlatList, Text, View } from "react-native";
 
-export default function CategoriesList({ categories }) {
+export default function CategoriesList({ categories, style }) {
     return (
-        <View>
-            {categories.map(category =>
-                <View key={category.id} style={{marginBottom: 20}}>
-                    <Text style={{fontStyle: "italic", fontWeight: 'bold'}}>{category.name}</Text>
-                    <Text style={{fontStyle: "italic"}}>{category.description}</Text>
+        <FlatList
+            style={style}
+            data={categories}
+            keyExtractor={(category) => category.id}
+            renderItem={({item}) =>
+                <View style={{ marginBottom: 20 }}>
+                    <Text style={{ fontStyle: "italic", fontWeight: 'bold' }}>{item.name}</Text>
+                    <Text style={{ fontStyle: "italic" }}>{item.description}</Text>
                 </View>
-            )}
-        </View>
+            }
+        >
+        </FlatList>
 
     )
 }

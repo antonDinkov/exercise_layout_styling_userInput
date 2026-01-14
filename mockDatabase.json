@@ -11,6 +11,78 @@
       "name": "Programming",
       "description": "Questions, tips, and code-related discussions",
       "order": 2
+    },
+    {
+      "id": "cat-003",
+      "name": "Programming",
+      "description": "Questions, tips, and code-related discussions",
+      "order": 3
+    },
+    {
+      "id": "cat-004",
+      "name": "Programming",
+      "description": "Questions, tips, and code-related discussions",
+      "order": 4
+    },
+    {
+      "id": "cat-005",
+      "name": "Programming",
+      "description": "Questions, tips, and code-related discussions",
+      "order": 5
+    },
+    {
+      "id": "cat-006",
+      "name": "Programming",
+      "description": "Questions, tips, and code-related discussions",
+      "order": 6
+    },
+    {
+      "id": "cat-007",
+      "name": "Programming",
+      "description": "Questions, tips, and code-related discussions",
+      "order": 7
+    },
+    {
+      "id": "cat-008",
+      "name": "Programming",
+      "description": "Questions, tips, and code-related discussions",
+      "order": 8
+    },
+    {
+      "id": "cat-009",
+      "name": "Programming",
+      "description": "Questions, tips, and code-related discussions",
+      "order": 9
+    },
+    {
+      "id": "cat-010",
+      "name": "Programming",
+      "description": "Questions, tips, and code-related discussions",
+      "order": 10
+    },
+    {
+      "id": "cat-011",
+      "name": "Programming",
+      "description": "Questions, tips, and code-related discussions",
+      "order": 11
+    },
+    {
+      "id": "cat-012",
+      "name": "Programming",
+      "description": "Questions, tips, and code-related discussions",
+      "order": 12
+    },
+    {
+      "id": "cat-013",
+      "name": "Programming",
+      "description": "Questions, tips, and code-related discussions",
+      "order": 13
+    },
+    {
+      "id": "cat-014",
+      "name": "Programming",
+      "description": "Questions, tips, and code-related discussions",
+      "order": 14
     }
   ],
 
