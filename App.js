@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import { useState } from 'react';
-import { ImageBackground, Platform, Pressable, SafeAreaView, StyleSheet, Switch, Text, useWindowDimensions, View } from 'react-native';
+import { Button, ImageBackground, KeyboardAvoidingView, Platform, Pressable, SafeAreaView, StyleSheet, Switch, Text, TextInput, useWindowDimensions, View } from 'react-native';
 import CategoriesList from './components/Categories';
 import data from './mockDatabase.json';
 
@@ -31,12 +31,15 @@ export default function App() {
                 <Text style={{ fontSize: 20, fontWeight: 'bold', color: 'orange' }}>Flippin egg - Discussion Forum</Text>
             </View>
             {isLandscape && <View style={{ alignSelf: 'center' }}><Text>The application is in landscape view</Text></View>}
-            <View style={{ padding: 15, gap: 5 }}>
+            <KeyboardAvoidingView
+                behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
+                keyboardVerticalOffset={Platform.OS === 'ios' ? 80 : 0}
+                style={{ padding: 15, gap: 5 }}>
                 <Pressable onPress={() => categoriesViewHandler()}>
                     <Text>Categories</Text>
                 </Pressable>
                 {categories && <CategoriesList style={{ maxHeight: '70%' }} categories={data.categories} />}
-                <View style={{flexDirection: 'row', gap: 10, alignItems: 'center'}}>
+                <View style={{ flexDirection: 'row', gap: 10, alignItems: 'center' }}>
                     <Text>Change Theme</Text>
                     <Switch
                         value={enabled}
@@ -44,6 +47,11 @@ export default function App() {
                         style={{ alignSelf: 'flex-start' }}
                     ></Switch>
                 </View>
+                <KeyboardAvoidingView style={{ flexDirection: 'row', gap: 5, alignItems: 'center' }}>
+                    <Text>Create New Category</Text>
+                    <TextInput style={{ borderWidth: 2, flex: 1, padding: 5 }}></TextInput>
+                    <Button title='create'></Button>
+                </KeyboardAvoidingView>
                 <View>
                     <Text>Topics</Text>
                 </View>
@@ -56,7 +64,7 @@ export default function App() {
                 <View>
                     <Text>Reactions:</Text>
                 </View>
-            </View>
+            </KeyboardAvoidingView>
         </ImageBackground>
 
 
