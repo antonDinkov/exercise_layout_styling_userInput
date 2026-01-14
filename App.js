@@ -36,10 +36,14 @@ export default function App() {
                     <Text>Categories</Text>
                 </Pressable>
                 {categories && <CategoriesList style={{ maxHeight: '70%' }} categories={data.categories} />}
-                <Switch
-                    value={enabled}
-                    onValueChange={setEnabled}
-                ></Switch>
+                <View style={{flexDirection: 'row', gap: 10, alignItems: 'center'}}>
+                    <Text>Change Theme</Text>
+                    <Switch
+                        value={enabled}
+                        onValueChange={setEnabled}
+                        style={{ alignSelf: 'flex-start' }}
+                    ></Switch>
+                </View>
                 <View>
                     <Text>Topics</Text>
                 </View>
