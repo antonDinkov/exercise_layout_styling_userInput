@@ -1,0 +1,90 @@
+{
+  "categories": [
+    {
+      "id": "cat-001",
+      "name": "General Discussion",
+      "description": "Open conversations and community talk",
+      "order": 1
+    },
+    {
+      "id": "cat-002",
+      "name": "Programming",
+      "description": "Questions, tips, and code-related discussions",
+      "order": 2
+    }
+  ],
+
+  "users": [
+    {
+      "id": "u-001",
+      "username": "anton",
+      "email": "anton@example.com",
+      "role": "moderator",
+      "joinedAt": "2025-12-20T14:22:00Z"
+    },
+    {
+      "id": "u-002",
+      "username": "maria_dev",
+      "email": "maria@example.com",
+      "role": "user",
+      "joinedAt": "2026-01-02T09:10:00Z"
+    }
+  ],
+
+  "topics": [
+    {
+      "id": "t-001",
+      "categoryId": "cat-001",
+      "title": "Welcome to the forum",
+      "authorId": "u-001",
+      "pinned": true,
+      "locked": false,
+      "createdAt": "2026-01-01T08:00:00Z",
+      "views": 154
+    },
+    {
+      "id": "t-002",
+      "categoryId": "cat-002",
+      "title": "How do you structure a REST API?",
+      "authorId": "u-002",
+      "pinned": false,
+      "locked": false,
+      "createdAt": "2026-01-12T16:40:00Z",
+      "views": 67
+    }
+  ],
+
+  "posts": [
+    {
+      "id": "p-001",
+      "topicId": "t-001",
+      "authorId": "u-001",
+      "content": "Welcome everyone! Use this topic to introduce yourself.",
+      "createdAt": "2026-01-01T08:05:00Z",
+      "editedAt": null
+    },
+    {
+      "id": "p-002",
+      "topicId": "t-002",
+      "authorId": "u-002",
+      "content": "What is your approach to versioning and error handling?",
+      "createdAt": "2026-01-12T16:42:00Z",
+      "editedAt": null
+    }
+  ],
+
+  "reactions": [
+    {
+      "id": "r-001",
+      "postId": "p-001",
+      "userId": "u-002",
+      "type": "like"
+    },
+    {
+      "id": "r-002",
+      "postId": "p-002",
+      "userId": "u-001",
+      "type": "helpful"
+    }
+  ]
+}
