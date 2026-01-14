@@ -47,11 +47,11 @@ export default function App() {
                         style={{ alignSelf: 'flex-start' }}
                     ></Switch>
                 </View>
-                <KeyboardAvoidingView style={{ flexDirection: 'row', gap: 5, alignItems: 'center' }}>
+                <View style={{ flexDirection: 'row', gap: 5, alignItems: 'center' }}>
                     <Text>Create New Category</Text>
                     <TextInput style={{ borderWidth: 2, flex: 1, padding: 5 }}></TextInput>
                     <Button title='create'></Button>
-                </KeyboardAvoidingView>
+                </View>
                 <View>
                     <Text>Topics</Text>
                 </View>
