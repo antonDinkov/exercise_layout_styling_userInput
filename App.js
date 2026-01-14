@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import { useState } from 'react';
-import { ImageBackground, Pressable, SafeAreaViewBase, StyleSheet, Text, View } from 'react-native';
+import { ImageBackground, Platform, Pressable, SafeAreaViewBase, StyleSheet, Text, View } from 'react-native';
 import CategoriesList from './components/Categories';
 import data from './mockDatabase.json';
 
@@ -10,7 +10,7 @@ export default function App() {
         setCategories(categories => !categories);
     }
     return (
-            <ImageBackground style={{flex: 1}} source={{uri: 'https://media.gettyimages.com/id/1298136769/video/social-media-speech-bubbles-4k-looped-background-footage.jpg?s=640x640&k=20&c=Moe-fPEN_e2eL6fSmA1Sln52tzBGs6xwTXiTxYXcTHQ='}}>
+            <ImageBackground style={{flex: 1}} source={ Platform.OS === 'android' ? {uri: 'https://media.gettyimages.com/id/1298136769/video/social-media-speech-bubbles-4k-looped-background-footage.jpg?s=640x640&k=20&c=Moe-fPEN_e2eL6fSmA1Sln52tzBGs6xwTXiTxYXcTHQ='} : {uri: 'https://p1.hiclipart.com/preview/796/688/961/background-meeting-discussion-group-conversation-internet-forum-communication-text-orange-line-png-clipart.jpg'}}>
                 <View style={styles.container}>
                     <StatusBar style="auto" />
                     <Text style={{ fontSize: 20, fontWeight: 'bold', color: 'orange' }}>Flippin egg - Discussion Forum</Text>

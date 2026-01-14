@@ -5,8 +5,8 @@ export default function CategoriesList({ categories }) {
         <View>
             {categories.map(category =>
                 <View key={category.id} style={{marginBottom: 20}}>
-                    <Text>{category.name}</Text>
-                    <Text>{category.description}</Text>
+                    <Text style={{fontStyle: "italic", fontWeight: 'bold'}}>{category.name}</Text>
+                    <Text style={{fontStyle: "italic"}}>{category.description}</Text>
                 </View>
             )}
         </View>
